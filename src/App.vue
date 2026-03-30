@@ -1,47 +1,41 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import { RouterLink, RouterView } from 'vue-router';
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div
+    class="max-w-[600px] mx-auto min-h-screen bg-gray-50 relative shadow-lg flex flex-col">
+    <header
+      class="h-14 bg-white flex items-center px-4 border-b border-gray-200 shrink-0">
+      <h1 class="text-xl font-bold text-primary">공찰까</h1>
+    </header>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+    <main class="flex-1 overflow-y-auto pb-16">
+      <RouterView />
+    </main>
 
-  <main>
-    <TheWelcome />
-  </main>
+    <nav
+      class="absolute bottom-0 w-full h-14 bg-white border-t border-gray-200 flex justify-around items-center text-sm font-medium text-gray-500">
+      <RouterLink
+        to="/"
+        class="flex flex-col items-center hover:text-primary active-link">
+        <span class="text-xl">🏟️</span>
+        <span class="text-[10px] mt-1">구장 찾기</span>
+      </RouterLink>
+
+      <RouterLink
+        to="/matches"
+        class="flex flex-col items-center hover:text-primary active-link">
+        <span class="text-xl">⚽</span>
+        <span class="text-[10px] mt-1">매치 참여</span>
+      </RouterLink>
+
+      <RouterLink
+        to="/mypage"
+        class="flex flex-col items-center hover:text-primary active-link">
+        <span class="text-xl">👤</span>
+        <span class="text-[10px] mt-1">마이페이지</span>
+      </RouterLink>
+    </nav>
+  </div>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
