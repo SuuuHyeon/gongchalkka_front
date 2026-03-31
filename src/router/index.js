@@ -1,3 +1,4 @@
+import LoginView from '@/views/LoginView.vue';
 import MatchDetailView from '@/views/MatchDetailView.vue';
 import MatchListView from '@/views/MatchListView.vue';
 import MyPageView from '@/views/MyPageView.vue';
@@ -24,6 +25,11 @@ const router = createRouter({
       path: '/matches/:id',
       name: '/match-detail',
       component: MatchDetailView,
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: LoginView,
     },
     {
       path: '/mypage',

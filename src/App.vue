@@ -1,5 +1,7 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router';
+import { RouterLink, RouterView, useRoute } from 'vue-router';
+
+const route = useRoute();
 </script>
 
 <template>
@@ -15,6 +17,7 @@ import { RouterLink, RouterView } from 'vue-router';
     </main>
 
     <nav
+      v-if="route.path !== '/login'"
       class="absolute bottom-0 w-full h-14 bg-white border-t border-gray-200 flex justify-around items-center text-sm font-medium text-gray-500">
       <RouterLink
         to="/"

@@ -24,3 +24,10 @@ export const fetchMatchDetail = async (id) => {
     throw error;
   }
 };
+
+// 매치 신청 메서드
+// export const applyToMatch = async (matchId) => {
+//     try {
+//         const response = await api.post()
+//     }
+// }
