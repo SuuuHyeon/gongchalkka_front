@@ -1,3 +1,4 @@
+import MatchDetailView from '@/views/MatchDetailView.vue';
 import MatchListView from '@/views/MatchListView.vue';
 import MyPageView from '@/views/MyPageView.vue';
 import StadiumListView from '@/views/StadiumListView.vue';
@@ -18,6 +19,11 @@ const router = createRouter({
       path: '/matches',
       name: 'matches',
       component: MatchListView,
+    },
+    {
+      path: '/matches/:id',
+      name: '/match-detail',
+      component: MatchDetailView,
     },
     {
       path: '/mypage',

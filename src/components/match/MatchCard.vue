@@ -1,14 +1,23 @@
 <script setup>
-defineProps({
+import { useRouter } from 'vue-router';
+
+const props = defineProps({
   match: {
     type: Object,
     required: true,
   },
 });
+
+const router = useRouter(); // 라우터 객체
+
+const goToDetail = () => {
+  router.push(`/matches/${props.match.id}`);
+};
 </script>
 
 <template>
   <div
+    @click="goToDetail"
     class="flex items-center p-4 mb-3 bg-white border border-gray-100 rounded-xl shadow-sm cursor-pointer hover:shadow-md transition-shadow">
     <div
       class="flex flex-col items-center justify-center mr-4 min-w-[65px] border-r border-gray-100 pr-3">
