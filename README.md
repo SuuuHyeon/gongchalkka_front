@@ -1,38 +1,32 @@
-# .
+# ⚽ 공찰까 (Gongchalkka) - 프론트엔드
 
-This template should help get you started developing with Vue 3 in Vite.
+> **누구나 쉽게 풋살 매치를 찾고 참여할 수 있는 풋살장 예약 및 소셜 매칭 서비스입니다.**
 
-## Recommended IDE Setup
+## 📌 프로젝트 개요
+'공찰까' 프론트엔드는 실시간 매치 정보와 구장 데이터를 제공하며, 직관적인 인터페이스를 통해 편리한 풋살 매칭 서비스를 제공합니다.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🛠 기술 스택 (Tech Stack)
+안정성과 빠른 개발 속도를 고려하여 최신 모던 프론트엔드 생태계를 구성했습니다.
 
-## Recommended Browser Setup
+* **프레임워크:** Vue 3 (Composition API) + Vite
+* **언어:** JavaScript (ES6+)
+* **스타일링:** Tailwind CSS + PostCSS
+* **상태관리:** Pinia
+* **라우팅:** Vue Router 4
+* **HTTP 통신:** Axios
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## ✨ 주요 기능 (Features)
+<!-- * **🏟️ 풋살장(Field) 조회:** 등록된 풋살장 목록 및 기본 정보 조회 -->
+* **⚽ 매치(Match) 탐색:** 날짜/시간별 모집 중인 풋살 매치 목록 확인
+* **📄 매치 상세 조회:** 매치별 시간, 구장 위치, 주최자, 참여 인원 현황 확인
+* **➡️ 매치 참가 및 생성:** 등록된 매치 참가, 새로운 매치 생성 기능
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+## 📂 폴더 구조 (Directory Structure)
+```text
+src/
+├── api/            # 백엔드 API 통신 함수 및 Axios 설정 (Axios, Mapper)
+├── assets/         # 정적 자원 및 전역 스타일시트 (main.css)
+├── components/     # UI 컴포넌트
+├── router/         # Vue Router 페이지 라우팅 설정
+├── stores/         # Pinia 전역 상태 관리 (Auth 등)
+└── views/          # URL 경로와 매핑되는 전체 화면(Page) 컴포넌트
