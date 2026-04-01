@@ -22,15 +22,15 @@ const route = useRoute();
       <RouterLink
         to="/"
         class="flex flex-col items-center hover:text-primary active-link">
-        <span class="text-xl">🏟️</span>
-        <span class="text-[10px] mt-1">구장 찾기</span>
+        <span class="text-xl">⚽</span>
+        <span class="text-[10px] mt-1">매치 참여</span>
       </RouterLink>
 
       <RouterLink
-        to="/matches"
+        to="/fields"
         class="flex flex-col items-center hover:text-primary active-link">
-        <span class="text-xl">⚽</span>
-        <span class="text-[10px] mt-1">매치 참여</span>
+        <span class="text-xl">🏟️</span>
+        <span class="text-[10px] mt-1">구장 찾기</span>
       </RouterLink>
 
       <RouterLink

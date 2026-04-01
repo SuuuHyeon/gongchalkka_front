@@ -1,7 +1,7 @@
 <script setup>
-// 부모 컴포넌트(리스트 화면)로부터 'stadium'이라는 이름의 데이터를 받아옵니다.
+// 부모 컴포넌트(리스트 화면)로부터 'field'이라는 이름의 데이터를 받아옵니다.
 defineProps({
-  stadium: {
+  field: {
     type: Object,
     required: true,
   },
@@ -17,8 +17,8 @@ defineProps({
     </div>
 
     <div class="flex-1">
-      <h3 class="font-bold text-gray-800 text-base mb-1">{{ stadium.name }}</h3>
-      <p class="text-sm text-gray-500">📍 {{ stadium.location }}</p>
+      <h3 class="font-bold text-gray-800 text-base mb-1">{{ field.name }}</h3>
+      <p class="text-sm text-gray-500">📍 {{ field.location }}</p>
     </div>
 
     <button

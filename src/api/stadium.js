@@ -1,6 +1,6 @@
 import api from './axios';
 
-export const fetchStadiums = async () => {
+export const fetchFields = async () => {
   try {
     const response = await api.get('/api/fields');
     return response.data;

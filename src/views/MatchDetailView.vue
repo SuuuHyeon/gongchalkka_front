@@ -15,7 +15,7 @@ onMounted(async () => {
     match.value = await fetchMatchDetail(matchId);
   } catch (error) {
     alert('데이터 로딩 오류');
-    router.push('/matches');
+    router.push('/');
   }
 });
 
